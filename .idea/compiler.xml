@@ -12,4 +12,7 @@
       <module name="Login" target="24" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--module-path $USER_HOME$/javafx-sdk-25/lib --add-modules javafx.controls,javafx.fxml " />
+  </component>
 </project>
