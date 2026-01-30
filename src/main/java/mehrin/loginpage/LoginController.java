@@ -1,6 +1,5 @@
 package mehrin.loginpage;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -20,7 +19,7 @@ public class LoginController {
 
     @FXML
     public void initialize() {
-        // Load image
+        // Load RUET logo
         Image image = new Image(getClass().getResourceAsStream("RUET.png"));
         imageView.setImage(image);
     }
@@ -40,4 +39,3 @@ public class LoginController {
         }
     }
 }
-

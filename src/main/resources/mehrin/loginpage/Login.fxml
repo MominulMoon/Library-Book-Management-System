@@ -4,58 +4,40 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/25"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="mehrin.loginpage.LoginController"
-      spacing="0"
-      prefWidth="800" prefHeight="600">
+<VBox prefHeight="550.0" prefWidth="730.0" spacing="0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mehrin.loginpage.LoginController">
 
-    <!-- 🔵 FULL WIDTH HEADING BAR -->
-    <HBox style="-fx-background-color: #0B2A4A; -fx-padding: 10 25;"
-          alignment="CENTER_LEFT">
-        <Label text="Rajshahi University of Engineering &amp; Technology"
-               style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <!-- 🔵 HEADER (FULL WIDTH ALWAYS) -->
+    <HBox alignment="CENTER_LEFT" style="-fx-background-color: #0B2A4A; -fx-padding: 14 30;">
+        <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Rajshahi University of Engineering &amp; Technology" />
     </HBox>
 
-    <!-- ⬇️ LOGIN AREA -->
-    <StackPane VBox.vgrow="ALWAYS" style="-fx-background-color: #a9c1e1;">
-        <!-- Centered login card -->
-        <HBox prefWidth="700" prefHeight="400"
-              style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);"
-              alignment="CENTER">
+    <!-- 🔹 FULL PAGE BACKGROUND -->
+    <StackPane style="-fx-background-color: #a9c1e1;" VBox.vgrow="ALWAYS">
+
+        <!-- 🔳 LOGIN CARD (FIXED SIZE) -->
+        <HBox alignment="CENTER" maxHeight="420" maxWidth="600" prefHeight="420" prefWidth="600" style="-fx-background-color: #e6e9ec;-fx-background-radius: 22;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 18, 0, 0, 8); ">
 
             <!-- LEFT SIDE -->
-            <VBox alignment="CENTER_LEFT"
-                  spacing="15"
-                  style="-fx-padding: 40;"
-                  prefWidth="450">
-                <Label text="Log in"
-                       style="-fx-font-size: 26; -fx-font-weight: bold;" />
+            <VBox alignment="CENTER_LEFT" prefWidth="440" spacing="14" style="-fx-padding: 40;">
+
+                <Label style="-fx-font-size: 28; -fx-font-weight: bold;" text="Log in" />
 
                 <Label text="Username or Email" />
-                <TextField fx:id="usernameField"
-                           promptText="Enter your username or email" />
+                <TextField fx:id="usernameField" prefHeight="38" promptText="Enter your username or email" />
 
                 <Label text="Password" />
-                <PasswordField fx:id="passwordField"
-                               promptText="Enter your password" />
+                <PasswordField fx:id="passwordField" prefHeight="38" promptText="Enter your password" />
 
-                <Button text="Log In"
-                        prefWidth="200"
-                        onAction="#handleLogin"
-                        style="-fx-background-color: #2F4F3E; -fx-text-fill: white;" />
+                <Button onAction="#handleLogin" prefHeight="40" prefWidth="220" style="-fx-background-color: #214f38; -fx-text-fill: white;" text="Log In" />
 
                 <Hyperlink text="Forgot Password?" />
             </VBox>
 
             <!-- RIGHT SIDE -->
-            <VBox alignment="CENTER" prefWidth="250">
-                <ImageView fx:id="imageView"
-                           fitHeight="200"
-                           fitWidth="200"
-                           preserveRatio="true">
+            <VBox alignment="CENTER" prefWidth="280">
+                <ImageView fx:id="imageView" fitWidth="190" preserveRatio="true">
                     <image>
-                        <Image url="@RUET.png"/>
+                        <Image url="@RUET.png" />
                     </image>
                 </ImageView>
             </VBox>
