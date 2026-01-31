@@ -13,7 +13,7 @@
 
 <VBox prefHeight="550.0" prefWidth="730.0" spacing="0" xmlns="http://javafx.com/javafx/25"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="mehrin.loginpage.LoginController" alignment="TOP_CENTER">
+      fx:controller="library.lms.LoginController" alignment="TOP_CENTER">
 
     <!-- HEADER -->
     <HBox alignment="CENTER_LEFT" style="-fx-background-color: #0B2A4A; -fx-padding: 14 30;">

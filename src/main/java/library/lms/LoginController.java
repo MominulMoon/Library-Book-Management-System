@@ -1,4 +1,4 @@
-package mehrin.loginpage;
+package library.lms;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,7 +32,7 @@ public class LoginController {
 
         System.out.println("Login clicked! Username: " + username);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) usernameField.getScene().getWindow(); // current stage
@@ -41,7 +41,7 @@ public class LoginController {
 
         Scene scene = new Scene(root, width, height);
         stage.setScene(scene);
-        stage.setTitle("Main Menu");
+        stage.setTitle("LMS Dashboard");
         stage.show();
     }
 

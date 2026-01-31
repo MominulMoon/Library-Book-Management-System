@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainContainer" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.lms.DashboardController">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox prefWidth="220.0" styleClass="sidebar">
+            <children>
+                <!-- BRAND / LOGO AREA -->
+                <VBox alignment="CENTER" prefHeight="100.0" spacing="5">
+                    <Label styleClass="brand-text" text="LMS" />
+                    <Label styleClass="brand-subtext" text="Library System" />
+                </VBox>
+
+                <!-- NAVIGATION BUTTONS -->
+                <VBox spacing="5" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets top="20" right="10" bottom="20" left="10"/>
+                    </padding>
+                    <Button text="Dashboard" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#showDashboard"/>
+                    <Button text="Books" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#showBooks"/>
+                    <Button text="Students" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#showStudents"/>
+                    <Button text="Issued Books" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#showIssuedBooks"/>
+                </VBox>
+
+                <!-- BOTTOM ACTIONS -->
+                <VBox alignment="CENTER" style="-fx-padding: 20;">
+                    <Button text="Logout" styleClass="logout-btn" onAction="#handleLogout"/>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- MAIN CONTENT AREA -->
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area">
+             <!-- Default Content: Dashboard Home -->
+             <VBox fx:id="dashboardHome" spacing="20" alignment="TOP_LEFT">
+                 <padding>
+                     <Insets top="30" right="30" bottom="30" left="30"/>
+                 </padding>
+                 <Label text="Dashboard Overview" styleClass="page-title"/>
+
+                 <!-- STAT CARDS ROW -->
+                 <HBox spacing="20">
+                     <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+                         <Label text="Total Books" styleClass="card-title"/>
+                         <Label fx:id="totalBooksLabel" text="0" styleClass="card-value"/>
+                     </VBox>
+                     <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+                         <Label text="Issued Books" styleClass="card-title"/>
+                         <Label fx:id="issuedBooksLabel" text="0" styleClass="card-value"/>
+                     </VBox>
+                     <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+                         <Label text="Total Students" styleClass="card-title"/>
+                         <Label fx:id="totalStudentsLabel" text="0" styleClass="card-value"/>
+                     </VBox>
+                 </HBox>
+
+                 <!-- CHART SECTION -->
+                 <VBox fx:id="chartContainer" VBox.vgrow="ALWAYS" alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 5); -fx-padding: 20;">
+                     <Label text="Book Status Distribution" styleClass="card-title" />
+                 </VBox>
+             </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

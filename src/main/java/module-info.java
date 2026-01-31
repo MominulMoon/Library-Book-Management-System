@@ -1,8 +1,8 @@
-module mehrin.loginpage {
+module library.lms {
     requires javafx.controls;
     requires javafx.fxml;
 
+    opens library.lms to javafx.fxml;
 
-    opens mehrin.loginpage to javafx.fxml;
-    exports mehrin.loginpage;
+    exports library.lms;
 }

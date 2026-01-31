@@ -1,5 +1,4 @@
-package mehrin.loginpage;
-
+package library.lms;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,5 +23,3 @@ public class MainApp extends Application {
         launch(args);
     }
 }
-
-
