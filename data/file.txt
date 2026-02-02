@@ -1,0 +1,4 @@
+# id|title|status
+B001|Clean Code|AVAILABLE
+B002|Effective Java|DUE
+B003|Design Patterns|AVAILABLE
